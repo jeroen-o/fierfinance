@@ -1,7 +1,10 @@
-# Handoff: FierFinance.nl — website concept
+# Handoff: FierFinance.nl — website concept (Modernist)
 
 ## Overview
 Eén-pagina websiteconcept voor Fier Finance, de formule van zelfstandige, lokale financiële kantoren (hypotheken, verzekeringen, kredieten, bankzaken, makelaardij, volmacht). Doel: het merkgevoel "fier" (trots zonder opschepperij, rechtop staan) vertalen naar een strakke, modernistische site met één rood accent, zichtbaar raster en 2px-lijnen. Bevat ook het gekozen logo (richting 1c: rode F in een vierkant).
+
+## Direct online zetten (GitHub Pages)
+`index.html` in de root is een **zelfstandige, werkende versie** van de Modernist-site (alle stijlen, scripts, logo's en de foto zitten erin gebundeld). Push deze map als repo-root en zet GitHub Pages aan (Settings → Pages → branch `main`, folder `/`). De site staat dan meteen live. De bestanden in `design/` zijn de bewerkbare bron voor een developer die de site nabouwt.
 
 ## About the Design Files
 De bestanden in `design/` zijn **design-referenties in HTML** — prototypes die look & gedrag tonen, geen productiecode. De opdracht is deze ontwerpen **na te bouwen in de doelomgeving** (Next.js/React, Astro, WordPress-thema, …) met de daar gebruikelijke patterns. Bestaat er nog geen omgeving: kies een statische-site-framework (bv. Astro of Next.js) en implementeer daar.
@@ -29,7 +32,10 @@ Radius: **0** overal. Schaduwen: niet gebruikt.
 Container: max-width 1200px, zijmarge `clamp(20px, 5vw, 72px)`.
 Focus: `outline: 2px solid accent; offset 2px`. Selectie: accent 30%.
 
-## Logo (1c)
+## Logo (1c — gekozen)
+Het F-blok wordt ook gebruikt als nummer-markering bij diensten 01–06 (28px) en in de nav (32px) en footer (36px).
+
+### Logo-specificaties
 - Vierkant in accent `#f0533d`, witte (`#f3f2f2`) Archivo 800 "F", links-boven uitgelijnd; letter ≈ 0.85× blokhoogte, line-height 0.8, padding ≈ 11% boven / 12,5% links.
 - Formaten: nav 32px, footer/diensten-nummering 28–36px, poster-close 72px (omgekeerd: blok `#f3f2f2`, F in accent).
 - Lockup: blok + "Fier" (800) / "Finance" (400) in twee regels, of één regel "Fier Finance" (800). Sub-merken: "Fier" 800 + naam 400 (Hypotheken, Verzekeren, Kredieten, Wonen, Volmacht, Bankzaken).
@@ -51,7 +57,7 @@ Drie gelijke cellen, gescheiden door 2px verticale lijnen, 2px lijn boven en ond
 
 ### 4. Diensten (#diensten)
 Kicker "DE FIER-FAMILIE", H2 "Alles wat met geld te maken heeft. Onder één naam." (max 24ch). Zes rijen met 2px lijn boven elke rij en onder de laatste. Grid `minmax(64px,160px) minmax(0,420px) minmax(0,1fr)`, kolomgap `clamp(24px, 4vw, 72px)`, padding 42px 0, baseline-aligned.
-- Kolom 1: F-blok 28px + nummer 01–06 (18px/800, tnum).
+- Kolom 1: F-blok 28px (accentvlak, witte F) + nummer 01–06 (18px/800, tnum).
 - Kolom 2: H3 24px + `.tag.tag-neutral` doelgroep.
 - Kolom 3: copy 15.5px/28px neutraal-800, max 52ch.
 Inhoud: Fier Hypotheken · Fier Verzekeren · Fier Kredieten · Fier Wonen (optioneel, prop) · Fier Bankzaken · Fier Volmacht — copy in de HTML.
