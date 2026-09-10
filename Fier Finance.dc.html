@@ -21,10 +21,37 @@
     a:hover { color: var(--color-accent); }
     .nav a:hover { color: var(--color-accent); }
     .btn, .tag, .nav-brand, .nav a { white-space: nowrap; text-wrap: nowrap; text-align: left; }
+    @media (max-width: 880px) {
+      [data-m="nav"] { flex-wrap: wrap; row-gap: 10px; padding-block: 14px !important; }
+      [data-m="nav"] a:not(.nav-brand) { font-size: 13px; }
+      [data-m="nav"] .btn { margin-left: auto; }
+      [data-m="hero"] { padding: 56px 0 48px !important; }
+      [data-m="hero-grid"] { grid-template-columns: minmax(0,1fr) !important; align-items: start !important; }
+      [data-m="dienst"] { grid-template-columns: minmax(0,1fr) !important; gap: 12px !important; padding: 28px 0 !important; }
+      [data-m="cells"] { grid-template-columns: minmax(0,1fr) !important; }
+      [data-m="cells"] > div { border-right: 0 !important; padding: 24px 0 !important; border-top: 2px solid var(--color-divider); }
+      [data-m="cells"] > div:first-child { border-top: 0; }
+      [data-m="row"] { grid-template-columns: minmax(0,1fr) !important; }
+      [data-m="kantoren"] { padding: 40px 0 56px !important; }
+      [data-m="kantoren"] figure { order: -1; }
+      [data-m="sec"] { padding: 56px 0 48px !important; }
+      [data-m="quote"] { padding: 0 0 56px !important; }
+      [data-m="close"] { padding: 56px clamp(20px,5vw,72px) !important; }
+      .btn { width: 100%; }
+      [data-m="nav"] .btn, [data-m="row"] .btn { width: auto; }
+    }
+    @media (max-width: 560px) {
+      [data-m="nav"] a:not(.nav-brand) { display: none; }
+      [data-m="nav"] .nav-brand { flex: 1; }
+      [data-m="nav"] .btn { margin-left: 0; }
+      [data-m="row"] { grid-template-columns: minmax(0,1fr) !important; }
+      [data-m="row"] .btn { width: 100%; }
+      .table td, .table th { padding-inline: 8px; font-size: 14px; }
+    }
   </style>
 </helmet>
 
-<nav class="nav" style="padding-inline: max(clamp(20px,5vw,72px), calc((100% - 1200px) / 2 + clamp(20px,5vw,72px)))">
+<nav class="nav" data-m="nav" style="padding-inline: max(clamp(20px,5vw,72px), calc((100% - 1200px) / 2 + clamp(20px,5vw,72px)))">
   <a href="#" class="nav-brand" style="display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--color-text);font-size:18px"><span style="display:flex;width:32px;height:32px;flex:none;background:var(--color-accent);color:var(--color-bg);font-family:var(--font-heading);font-weight:800;font-size:27px;line-height:0.8;padding:3px 4px;box-sizing:border-box">F</span>Fier Finance</a>
   <a href="#diensten">Diensten</a>
   <a href="#bankzaken">Bankzaken</a>
@@ -36,8 +63,8 @@
 
 <div style="max-width:1200px;margin:0 auto;padding:0 clamp(20px,5vw,72px)">
 
-  <section data-screen-label="Hero" style="padding:112px 0 84px">
-    <div style="display:grid;grid-template-columns:minmax(0,1fr) auto;gap:28px clamp(24px,4vw,72px);align-items:end">
+  <section data-screen-label="Hero" data-m="hero" style="padding:112px 0 84px">
+    <div data-m="hero-grid" style="display:grid;grid-template-columns:minmax(0,1fr) auto;gap:28px clamp(24px,4vw,72px);align-items:end">
       <h1 style="font-family:var(--font-heading);font-weight:800;font-size:clamp(42px,6.2vw,84px);line-height:1.06;letter-spacing:-0.02em;margin:0 0 0 -0.058em">
         <span style="display:block">{{ taglineA }}</span>
         <span style="display:block;color:var(--color-accent)">{{ taglineB }}</span>
@@ -57,7 +84,7 @@
 
   <hr style="height:2px;border:0;margin:0;background:var(--color-divider)">
 
-  <section data-screen-label="Kernwaarden" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:0;padding:0">
+  <section data-screen-label="Kernwaarden" data-m="cells" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:0;padding:0">
     <div style="padding:42px clamp(0px,2vw,28px) 42px 0;border-right:2px solid var(--color-divider)">
       <p style="font-family:var(--font-heading);font-weight:800;font-size:clamp(28px,3vw,40px);line-height:1.1;color:var(--color-accent);margin:0 0 14px -0.045em">Eén adres</p>
       <p style="font-size:13px;line-height:20px;letter-spacing:0.08em;text-transform:uppercase;margin:0;color:var(--color-neutral-700)">Hypotheek, verzekering, krediet en bankzaken op één plek</p>
@@ -74,12 +101,12 @@
 
   <hr style="height:2px;border:0;margin:0;background:var(--color-divider)">
 
-  <section id="diensten" data-screen-label="Diensten" style="padding:84px 0 70px">
+  <section id="diensten" data-screen-label="Diensten" data-m="sec" style="padding:84px 0 70px">
     <span style="display:block;font-size:13px;line-height:14px;letter-spacing:0.08em;text-transform:uppercase;color:var(--color-accent-700);margin:0 0 14px">De Fier-familie</span>
     <h2 style="font-size:clamp(28px,3.2vw,40px);line-height:1.1;letter-spacing:-0.015em;margin:0 0 42px;max-width:24ch">Alles wat met geld te maken heeft. Onder één naam.</h2>
 
     <sc-for list="{{ diensten }}" as="d" hint-placeholder-count="5">
-      <div style="display:grid;grid-template-columns:minmax(64px,160px) minmax(0,420px) minmax(0,1fr);gap:28px clamp(24px,4vw,72px);align-items:baseline;padding:42px 0;border-top:2px solid var(--color-divider)">
+      <div data-m="dienst" style="display:grid;grid-template-columns:minmax(64px,160px) minmax(0,420px) minmax(0,1fr);gap:28px clamp(24px,4vw,72px);align-items:baseline;padding:42px 0;border-top:2px solid var(--color-divider)">
         <p style="font-family:var(--font-heading);font-weight:800;font-size:18px;line-height:28px;margin:0;font-feature-settings:'tnum' 1;display:flex;align-items:center;gap:14px"><span style="display:flex;width:28px;height:28px;flex:none;background:var(--color-accent);color:var(--color-bg);font-family:var(--font-heading);font-weight:800;font-size:23px;line-height:0.8;padding:3px 4px;box-sizing:border-box">F</span>{{ d.num }}</p>
         <div>
           <h3 style="font-size:24px;line-height:28px;letter-spacing:-0.01em;margin:0 0 8px">{{ d.naam }}</h3>
@@ -91,7 +118,7 @@
     <hr style="height:2px;border:0;margin:0;background:var(--color-divider)">
   </section>
 
-  <section id="bankzaken" data-screen-label="Bankzaken" style="padding:70px 0 84px;border-bottom:2px solid var(--color-divider)">
+  <section id="bankzaken" data-screen-label="Bankzaken" data-m="sec" style="padding:70px 0 84px;border-bottom:2px solid var(--color-divider)">
     <span style="display:block;font-size:13px;line-height:14px;letter-spacing:0.08em;text-transform:uppercase;color:var(--color-accent-700);margin:0 0 14px">Bankzaken</span>
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:28px clamp(24px,4vw,72px);align-items:start">
       <div>
@@ -104,21 +131,21 @@
         </div>
       </div>
       <div style="display:grid;gap:0;border-top:2px solid var(--color-divider)">
-        <div style="display:grid;grid-template-columns:minmax(0,1fr) auto;gap:14px;align-items:start;padding:28px 0;border-bottom:2px solid var(--color-divider)">
+        <div data-m="row" style="display:grid;grid-template-columns:minmax(0,1fr) auto;gap:14px;align-items:start;padding:28px 0;border-bottom:2px solid var(--color-divider)">
           <div>
             <h3 style="font-size:20px;line-height:28px;margin:0 0 8px">Particulier</h3>
             <p style="font-size:15.5px;line-height:28px;margin:0;color:var(--color-neutral-800)">Betaalrekening, sparen en beleggen. Openen doe je bij ons aan tafel, beheren doe je zelf in de app.</p>
           </div>
           <button type="button" class="btn btn-primary" style="justify-content:flex-start">Meer informatie</button>
         </div>
-        <div style="display:grid;grid-template-columns:minmax(0,1fr) auto;gap:14px;align-items:start;padding:28px 0;border-bottom:2px solid var(--color-divider)">
+        <div data-m="row" style="display:grid;grid-template-columns:minmax(0,1fr) auto;gap:14px;align-items:start;padding:28px 0;border-bottom:2px solid var(--color-divider)">
           <div>
             <h3 style="font-size:20px;line-height:28px;margin:0 0 8px">Bedrijf</h3>
             <p style="font-size:15.5px;line-height:28px;margin:0;color:var(--color-neutral-800)">Zakelijk betalen en sparen voor zzp’ers en mkb, gekoppeld aan je verzekeringen en krediet bij hetzelfde adres.</p>
           </div>
           <button type="button" class="btn btn-primary" style="justify-content:flex-start">Meer informatie</button>
         </div>
-        <div style="display:grid;grid-template-columns:minmax(0,1fr) auto;gap:14px;align-items:start;padding:28px 0">
+        <div data-m="row" style="display:grid;grid-template-columns:minmax(0,1fr) auto;gap:14px;align-items:start;padding:28px 0">
           <div>
             <h3 style="font-size:20px;line-height:28px;margin:0 0 8px">Initiatieven</h3>
             <p style="font-size:15.5px;line-height:28px;margin:0;color:var(--color-neutral-800)">Lokale projecten die we samen met ASN Bank steunen — omdat bankieren ook iets terug mag geven aan de buurt.</p>
@@ -129,7 +156,7 @@
     </div>
   </section>
 
-  <section id="kantoren" data-screen-label="Kantoren" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:28px clamp(24px,5vw,96px);align-items:center;padding:56px 0 84px">
+  <section id="kantoren" data-screen-label="Kantoren" data-m="kantoren" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:28px clamp(24px,5vw,96px);align-items:center;padding:56px 0 84px">
     <div>
       <span style="display:block;font-size:13px;line-height:14px;letter-spacing:0.08em;text-transform:uppercase;color:var(--color-accent-700);margin:0 0 14px">Jouw kantoor</span>
       <h2 style="font-size:32px;line-height:42px;letter-spacing:-0.015em;margin:0">Een adviseur die je bij naam kent.</h2>
@@ -159,16 +186,16 @@
 
   <hr style="height:2px;border:0;margin:0;background:var(--color-divider)">
 
-  <section id="partners" data-screen-label="Onze partners" style="padding:70px 0 84px;border-bottom:2px solid var(--color-divider)">
+  <section id="partners" data-screen-label="Onze partners" data-m="sec" style="padding:70px 0 84px;border-bottom:2px solid var(--color-divider)">
     <span style="display:block;font-size:13px;line-height:14px;letter-spacing:0.08em;text-transform:uppercase;color:var(--color-accent-700);margin:0 0 14px">Onze partners</span>
     <h2 style="font-size:clamp(28px,3.2vw,40px);line-height:1.1;letter-spacing:-0.015em;margin:0 0 42px;max-width:26ch">Onafhankelijk. We vergelijken voor je bij alle grote aanbieders.</h2>
-    <div style="overflow:hidden;display:grid;gap:28px">{{ partnerStream }}</div>
+    <div style="overflow:hidden;display:grid;gap:28px;background:#ffffff;padding:28px 0">{{ partnerStream }}</div>
   </section>
 
-  <section id="waarom" data-screen-label="Waarom Fier" style="padding:84px 0 70px">
+  <section id="waarom" data-screen-label="Waarom Fier" data-m="sec" style="padding:84px 0 70px">
     <span style="display:block;font-size:13px;line-height:14px;letter-spacing:0.08em;text-transform:uppercase;color:var(--color-accent-700);margin:0 0 14px">Waar de naam voor staat</span>
     <h2 style="font-size:clamp(28px,3.2vw,40px);line-height:1.1;letter-spacing:-0.015em;margin:0 0 42px;max-width:22ch">Fier is trots zonder opschepperij.</h2>
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:0;border-top:2px solid var(--color-divider);border-bottom:2px solid var(--color-divider)">
+    <div data-m="cells" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:0;border-top:2px solid var(--color-divider);border-bottom:2px solid var(--color-divider)">
       <div style="padding:36px clamp(0px,2vw,28px) 36px 0;border-right:2px solid var(--color-divider)">
         <h3 style="font-size:20px;line-height:28px;margin:0 0 14px">Fier op je huis</h3>
         <p style="font-size:15.5px;line-height:28px;margin:0;color:var(--color-neutral-800)">Rechtop staan en weten wat je waard bent. Een hypotheek die past bij je leven, niet bij een verkooptarget.</p>
@@ -205,7 +232,7 @@
     </div>
   </section>
 
-  <section data-screen-label="Quote" style="padding:0 0 98px">
+  <section data-screen-label="Quote" data-m="quote" style="padding:0 0 98px">
     <figure>
       <blockquote style="font-family:var(--font-heading);font-weight:800;font-size:clamp(24px,2.6vw,34px);line-height:1.25;letter-spacing:-0.015em;max-width:32ch;margin:0">“Ik ken mijn adviseur bij naam. Hij kent mijn bedrijf, mijn huis en mijn kinderen. Dat is bij een bank nog nooit gelukt.”</blockquote>
       <figcaption style="font-size:15.5px;line-height:28px;color:var(--color-neutral-700);margin:42px 0 0">— Peter van Warmerhof, klant van Fier Finance</figcaption>
@@ -215,7 +242,7 @@
 </div>
 
 <section data-screen-label="Poster close" style="background:var(--color-accent);color:var(--color-bg)">
-  <div style="max-width:1200px;margin:0 auto;padding:84px clamp(20px,5vw,72px)">
+  <div data-m="close" style="max-width:1200px;margin:0 auto;padding:84px clamp(20px,5vw,72px)">
     <div style="display:flex;width:72px;height:72px;background:var(--color-bg);color:var(--color-accent);font-family:var(--font-heading);font-weight:800;font-size:62px;line-height:0.8;padding:8px 9px;box-sizing:border-box;margin-bottom:42px">F</div>
     <h3 style="font-size:clamp(34px,4.2vw,56px);line-height:1.06;letter-spacing:-0.015em;margin:0 0 0 -0.058em;color:var(--color-bg)"><span style="display:block">Fier Finance.</span><span style="display:block">Fier vooruit.</span></h3>
     <div style="display:flex;gap:var(--space-3);flex-wrap:wrap;margin-top:42px">
@@ -260,6 +287,7 @@ class Component extends DCLogic {
       ...(wonen ? [{ naam: 'Fier Wonen', voor: 'Makelaardij · waar aangeboden', copy: 'Aankoop, verkoop en taxatie in dezelfde straat als je hypotheek. Niet bij elk kantoor — vraag ernaar bij het jouwe.' }] : []),
       { naam: 'Fier Bankzaken', voor: 'Particulier · Zakelijk · ASN Bank', copy: 'Als Zelfstandig Adviseur van ASN Bank regelen we betalen, sparen en beleggen aan tafel — duurzaam bankieren met een gezicht.' },
       { naam: 'Fier Volmacht', voor: 'Formule', copy: 'Ons eigen volmachtbedrijf maakt polissen op en handelt schades af. Kortere lijnen, snellere beslissingen, in eigen huis.' },
+      { naam: 'Fier Schadeafhandeling', voor: 'Particulier · Zakelijk', copy: 'Schade? Eén telefoontje naar je eigen adviseur. Wij melden, regelen en volgen op tot het is opgelost — daar zijn we goed in.' },
     ].map((d, i) => ({ ...d, num: String(i + 1).padStart(2, '0') }));
     const doelgroep = this.state.doelgroep;
     const rijen = doelgroep === 'ondernemer'
