@@ -33,7 +33,7 @@ Container: max-width 1200px, zijmarge `clamp(20px, 5vw, 72px)`.
 Focus: `outline: 2px solid accent; offset 2px`. Selectie: accent 30%.
 
 ## Logo (1c — gekozen)
-Het F-blok wordt ook gebruikt als nummer-markering bij diensten 01–06 (28px) en in de nav (32px) en footer (36px).
+Het F-blok wordt ook gebruikt als nummer-markering bij diensten 01–07 (28px) en in de nav (32px) en footer (36px).
 
 ### Logo-specificaties
 - Vierkant in accent `#f0533d`, witte (`#f3f2f2`) Archivo 800 "F", links-boven uitgelijnd; letter ≈ 0.85× blokhoogte, line-height 0.8, padding ≈ 11% boven / 12,5% links.
@@ -56,11 +56,11 @@ Padding 112px boven / 84 onder. Grid: titel (1fr) + rechts ASN-blok (auto), alig
 Drie gelijke cellen, gescheiden door 2px verticale lijnen, 2px lijn boven en onder. Titel `clamp(28px, 3vw, 40px)` 800 in accent: "Eén adres" / "Eén adviseur" / "100% zelfstandig"; daaronder uppercase 13px label.
 
 ### 4. Diensten (#diensten)
-Kicker "DE FIER-FAMILIE", H2 "Alles wat met geld te maken heeft. Onder één naam." (max 24ch). Zes rijen met 2px lijn boven elke rij en onder de laatste. Grid `minmax(64px,160px) minmax(0,420px) minmax(0,1fr)`, kolomgap `clamp(24px, 4vw, 72px)`, padding 42px 0, baseline-aligned.
-- Kolom 1: F-blok 28px (accentvlak, witte F) + nummer 01–06 (18px/800, tnum).
+Kicker "DE FIER-FAMILIE", H2 "Alles wat met geld te maken heeft. Onder één naam." (max 24ch). Zeven rijen met 2px lijn boven elke rij en onder de laatste. Grid `minmax(64px,160px) minmax(0,420px) minmax(0,1fr)`, kolomgap `clamp(24px, 4vw, 72px)`, padding 42px 0, baseline-aligned.
+- Kolom 1: F-blok 28px (accentvlak, witte F) + nummer 01–07 (18px/800, tnum).
 - Kolom 2: H3 24px + `.tag.tag-neutral` doelgroep.
 - Kolom 3: copy 15.5px/28px neutraal-800, max 52ch.
-Inhoud: Fier Hypotheken · Fier Verzekeren · Fier Kredieten · Fier Wonen (optioneel, prop) · Fier Bankzaken · Fier Volmacht — copy in de HTML.
+Inhoud: Fier Hypotheken · Fier Verzekeren · Fier Kredieten · Fier Wonen (optioneel, prop) · Fier Bankzaken · Fier Volmacht · Fier Schadeafhandeling — copy in de HTML.
 Onder 880px: één kolom, gap 14px.
 
 ### 5. Bankzaken (#bankzaken)
@@ -71,7 +71,7 @@ Twee kolommen (auto-fit, min 300px), gap `clamp(24px, 5vw, 96px)`. Links: kicker
 Resultaat na zoeken (≥4 tekens): blok met 2px lijn boven, kantoornaam 17px/800, adres + adviseur 14px, `.tag.tag-accent` afstand.
 
 ### 7. Onze partners (#partners)
-Kicker "ONZE PARTNERS", H2 "Onafhankelijk. We vergelijken voor je bij alle grote aanbieders." Twee marquee-rijen, gap 28px, overflow hidden. Cel 270×108px, padding 0 42px, logo `object-fit: contain`, **`mix-blend-mode: multiply`** (laat witte logo-achtergronden wegvallen). Rij 1 = eerste 13 logo's, 55s; rij 2 = rest, 70s; lineair, oneindig, lijst gedupliceerd en translateX 0 → −50%. Uit bij `prefers-reduced-motion`. Logo's in kleur (uitzondering op de grayscale-regel). Sectie sluit met 2px lijn.
+Kicker "ONZE PARTNERS", H2 "Onafhankelijk. We vergelijken voor je bij alle grote aanbieders." Wit blok (`#ffffff`, padding 28px 0) met twee marquee-rijen, gap 28px, overflow hidden. Cel 270×108px, padding 0 42px, logo `object-fit: contain`, **`mix-blend-mode: multiply`** (laat witte logo-achtergronden wegvallen). Rij 1 = eerste 13 logo's, 55s; rij 2 = rest, 70s; lineair, oneindig, lijst gedupliceerd en translateX 0 → −50%. Uit bij `prefers-reduced-motion`. Logo's in kleur (uitzondering op de grayscale-regel). Sectie sluit met 2px lijn.
 
 ### 8. Waar de naam voor staat (#waarom)
 Kicker + H2 "Fier is trots zonder opschepperij." Drie cellen met 2px lijnen boven/onder/tussen: "Fier op je huis" / "Fier op je bedrijf" / "Fier op wat je geregeld hebt", H3 20px + copy 15.5px/28px.
@@ -102,7 +102,7 @@ Drie kolommen (auto-fit, min 200px), 13px/22px neutraal-700: logo-lockup + "Zelf
 - `doelgroep`: particulier | ondernemer
 
 ## Responsive
-Fluid, max 1200px. Grids met `auto-fit, minmax(…,1fr)`. Breakpoints: 880px (dienstenrijen stapelen), 720px (foto boven, hero-padding kleiner), 480px (navlinks weg). Geen tekstwrap in knoppen/tags/navlabels.
+Fluid, max 1200px. Grids met `auto-fit, minmax(…,1fr)`. Breakpoints: 880px (nav wrapt, hero/secties compacter, kernwaarden + Waarom Fier gestapeld met lijnen, dienstenrijen in één kolom, foto boven de kantoorzoeker, knoppen volle breedte, Bankzaken-rijen gestapeld) en 560px (navlinks verborgen, tabel compacter). In de HTML gemarkeerd met `data-m` attributen. Geen tekstwrap in knoppen/tags/navlabels.
 
 ## Assets (`design/assets/`)
 - `logo-asn.svg` — ASN Bank (kleur eekhoorn `#f0533d` = accent)
