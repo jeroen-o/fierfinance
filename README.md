@@ -4,12 +4,22 @@
 Eén-pagina websiteconcept voor Fier Finance, de formule van zelfstandige, lokale financiële kantoren (hypotheken, verzekeringen, kredieten, bankzaken, makelaardij, volmacht). Doel: het merkgevoel "fier" (trots zonder opschepperij, rechtop staan) vertalen naar een strakke, modernistische site met één rood accent, zichtbaar raster en 2px-lijnen. Bevat ook het gekozen logo (richting 1c: rode F in een vierkant).
 
 ## Direct online zetten (GitHub Pages)
-`index.html` in de root is een **zelfstandige, werkende versie** van de Modernist-site (alle stijlen, scripts, logo's en de foto zitten erin gebundeld). Push deze map als repo-root en zet GitHub Pages aan (Settings → Pages → branch `main`, folder `/`). De site staat dan meteen live. De bestanden in `design/` zijn de bewerkbare bron voor een developer die de site nabouwt.
+De root bevat vier zelfstandige, werkende pagina's (stijlen, scripts, data en beelden zijn ingebundeld):
+- `index.html` — home
+- `vestigingen.html` — zoeker (postcode/plaats/locatie) + alle 107 vestigingen
+- `vestiging.html?id=<slug>` — één pagina per vestiging (bv. `vestiging.html?id=schagen`)
+- `franchise-worden.html` — werving franchisenemers + aanmeldformulier (nog niet gekoppeld aan e-mail/CRM)
+
+Push deze map als repo-root en zet Pages aan (Settings → Pages → `main` / root).
+
+**Vestigingsdata** staat in `vestigingen.js` (bron: ASN-overzicht franchisenemers). Bewust zonder persoonsnamen of persoonlijke contactgegevens. Coördinaten zijn per plaats benaderd; de postcodezoeker gebruikt de gratis PDOK Locatieserver en valt terug op postcode-nabijheid. Bij wijzigingen: pas `vestigingen.js` aan en bundel opnieuw, of laat een developer de pagina's uit `design/` nabouwen met een CMS.
 
 ## About the Design Files
 De bestanden in `design/` zijn **design-referenties in HTML** — prototypes die look & gedrag tonen, geen productiecode. De opdracht is deze ontwerpen **na te bouwen in de doelomgeving** (Next.js/React, Astro, WordPress-thema, …) met de daar gebruikelijke patterns. Bestaat er nog geen omgeving: kies een statische-site-framework (bv. Astro of Next.js) en implementeer daar.
 
-- `design/Fier Finance.dc.html` — de complete pagina (template + logica in één bestand)
+- `design/Fier Finance.dc.html` — home
+- `design/Vestigingen.dc.html`, `design/Vestiging.dc.html`, `design/Franchise worden.dc.html` — overige pagina's
+- `design/vestigingen.js` — vestigingsdata + zoeklogica
 - `design/Fier Finance Logo.dc.html` — de drie logo-richtingen; **1c is gekozen**
 - `design/styles.css` — design-tokens en componentklassen (bron van waarheid voor kleur/typo/spacing)
 - `design/assets/` — partnerlogo's en ASN-logo
@@ -20,7 +30,9 @@ De bestanden in `design/` zijn **design-referenties in HTML** — prototypes die
 ## Design Tokens
 Font: **Archivo** (Google Fonts), 400 / 600 / 800. Headings 800, letter-spacing −0.015 tot −0.03em.
 
-Kleuren
+Kleuren (ASN Bank brandportal, online HEX)
+- Basis: rood `#F0533D`, grijs `#575756` (secundaire tekst), donkergrijs `#373737` (tekst)
+- Hoofdkleuren (gemeten op asnbank.nl): groen `#1F7D65` (koppen, knoppen), geel `#FADA87` (vlakken), bordeaux `#7C1230` (links, footer), crème `#FDF3E5` (lichte vlakken). Oranje `#FBA36F` (Pantone 1565 C, benaderd) alleen als accentblokje.
 - Achtergrond `#f3f2f2` · Surface `#eae9e9` · Tekst `#201e1d`
 - **Accent `#f0533d`** (ASN-eekhoornrood; overschrijft het systeemrood) · hover `#d8412c` · pressed / klein accenttekst `#a82b18`
 - Accent-ramp: 100 `#fff2ef` · 200 `#ffe0d9` · 800 `#7c1405`
