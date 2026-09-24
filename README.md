@@ -12,7 +12,11 @@ De root bevat vier zelfstandige, werkende pagina's (stijlen, scripts, data en be
 
 Push deze map als repo-root en zet Pages aan (Settings → Pages → `main` / root).
 
-**Vestigingsdata** staat in `vestigingen.js` (bron: ASN-overzicht franchisenemers). Bewust zonder persoonsnamen of persoonlijke contactgegevens. Coördinaten zijn per plaats benaderd; de postcodezoeker gebruikt de gratis PDOK Locatieserver en valt terug op postcode-nabijheid. Bij wijzigingen: pas `vestigingen.js` aan en bundel opnieuw, of laat een developer de pagina's uit `design/` nabouwen met een CMS.
+De root-pagina's zijn **statische HTML** (geen bundel / geen "Unpacking"-scherm), met eigen paginatitel en F-favicon; scripts, fonts en beelden staan in `assets/`. `CNAME` koppelt het domein fierfinance.nl.
+
+**Noindex:** alle pagina's (root én `design/`) hebben `<meta name="robots" content="noindex, nofollow, noarchive">`, zodat zoekmachines het concept niet opnemen. Verwijder deze tag pas bij livegang. Voeg géén `Disallow` in robots.txt toe: dan ziet Google de noindex-tag niet meer.
+
+**Vestigingsdata** staat in `vestigingen.js` (bron: ASN-overzicht franchisenemers; e-mailadressen per vestiging in de vorm `<plaats>@fierfinance.nl`). Let op: de root-pagina's laden de kopie in `assets/44fe3f5be64d.js` — werk bij een wijziging alle drie de kopieën bij (`vestigingen.js`, `design/vestigingen.js`, `assets/44fe3f5be64d.js`). Bewust zonder persoonsnamen of persoonlijke contactgegevens. Coördinaten zijn per plaats benaderd; de postcodezoeker gebruikt de gratis PDOK Locatieserver en valt terug op postcode-nabijheid. Bij wijzigingen: pas `vestigingen.js` aan en bundel opnieuw, of laat een developer de pagina's uit `design/` nabouwen met een CMS.
 
 ## About the Design Files
 De bestanden in `design/` zijn **design-referenties in HTML** — prototypes die look & gedrag tonen, geen productiecode. De opdracht is deze ontwerpen **na te bouwen in de doelomgeving** (Next.js/React, Astro, WordPress-thema, …) met de daar gebruikelijke patterns. Bestaat er nog geen omgeving: kies een statische-site-framework (bv. Astro of Next.js) en implementeer daar.
@@ -76,7 +80,7 @@ Inhoud: Fier Hypotheken · Fier Verzekeren · Fier Kredieten · Fier Wonen (opti
 Onder 880px: één kolom, gap 14px.
 
 ### 5. Bankzaken (#bankzaken)
-Kicker "BANKZAKEN". Twee kolommen (auto-fit, min 300px). Links: H2 32px/42px, twee alinea's over ASN Bank als Zelfstandig Adviseur, daaronder 2px lijn + ASN-logo 28px + label "ZELFSTANDIG ADVISEUR VAN ASN BANK". Rechts: drie rijen (Particulier / Bedrijf / Initiatieven), elk H3 20px + copy + knop "Meer informatie" rechts (primair, primair, secundair), 2px lijnen tussen rijen. Sectie sluit met 2px lijn.
+Kicker "BANKZAKEN". Volle breedte in ASN-geel, padding 84px `clamp(20px,5vw,72px)` (zelfde zijmarge als het raster). Twee gelijke kolommen (`minmax(0,1fr) minmax(0,1fr)`), gap `clamp(32px,5vw,96px)`, `align-items: stretch` zodat beide kolommen even hoog zijn. Links: H2 32px/42px, twee alinea's over ASN Bank als Zelfstandig Adviseur; onderaan de kolom (margin-top auto) 2px lijn + ASN-logo 28px + label "ZELFSTANDIG ADVISEUR VAN ASN BANK". Rechts: drie rijen (Particulier / Bedrijf / Initiatieven), elk H3 20px + copy + knop "Meer informatie" rechts (alle drie primair), gap 14px 28px, 2px lijnen tussen rijen; eerste rij padding-top 7px (optisch gelijk met H2), laatste rij zonder onderlijn. Mobiel (<880px): één kolom, padding 56px met zijmarge, 2px lijn boven de rijen, knoppen volle breedte met gecentreerd label, ASN-logo 24px.
 
 ### 6. Kantoren (#kantoren)
 Twee kolommen (auto-fit, min 300px), gap `clamp(24px, 5vw, 96px)`. Links: kicker "JOUW KANTOOR", H2 "Een adviseur die je bij naam kent.", copy, formulier: `.field` label "Postcode" + `.input` placeholder "1234 AB" + primaire knop "Vind mijn kantoor" + secundaire "Bankzaken". Rechts: foto `kop-munt_5.png` (adviseurs), **in kleur** (uitzondering op de grayscale-regel), 951:665, cover-crop. Onder 720px foto boven de tekst.
