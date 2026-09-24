@@ -11,13 +11,14 @@
   <link rel="stylesheet" href="_ds/modernist-147b6d48-53bd-4a7b-b37e-74b8a6235979/styles.css">
   <script src="_ds/modernist-147b6d48-53bd-4a7b-b37e-74b8a6235979/_ds_bundle.js"></script>
   <script src="./image-slot.js"></script>
+  <script src="./vestigingen.js"></script>
   <style>
-    :root { --color-accent: #f0533d; --color-accent-500: #f0533d; --color-accent-600: #d8412c; --color-accent-700: #a82b18; }
+    :root { --color-accent: #f0533d; --color-accent-500: #f0533d; --color-accent-600: #d8412c; --color-accent-700: #a82b18; --color-text: #373737; --color-neutral-700: #575756; --color-neutral-800: #575756; --color-divider: color-mix(in srgb, #373737 35%, transparent); --asn-geel: #fada87; --asn-oranje: #fba36f; --asn-lichtgroen: #1f7d65; --asn-groen: #1f7d65; --asn-bordeaux: #7c1230; --asn-creme: #fdf3e5; }
     html { scroll-behavior: smooth; }
     @keyframes fier-marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
     @media (prefers-reduced-motion: reduce) { .fier-marquee { animation: none !important; } }
     body { margin: 0; text-wrap: pretty; background: var(--color-bg); color: var(--color-text); font-family: var(--font-body); }
-    a { color: var(--color-accent-700); text-underline-offset: 3px; }
+    a { color: var(--asn-bordeaux); text-underline-offset: 3px; }
     a:hover { color: var(--color-accent); }
     .nav a:hover { color: var(--color-accent); }
     .btn, .tag, .nav-brand, .nav a { white-space: nowrap; text-wrap: nowrap; text-align: left; }
@@ -55,10 +56,10 @@
   <a href="#" class="nav-brand" style="display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--color-text);font-size:18px"><span style="display:flex;width:32px;height:32px;flex:none;background:var(--color-accent);color:var(--color-bg);font-family:var(--font-heading);font-weight:800;font-size:27px;line-height:0.8;padding:3px 4px;box-sizing:border-box">F</span>Fier Finance</a>
   <a href="#diensten">Diensten</a>
   <a href="#bankzaken">Bankzaken</a>
-  <a href="#kantoren">Kantoren</a>
+  <a href="Vestigingen.dc.html">Vestigingen</a>
   <a href="#waarom">Waarom Fier</a>
-  <a href="#ondernemers">Ondernemers</a>
-  <button type="button" class="btn btn-primary" style="justify-content:flex-start">Maak een afspraak</button>
+  <a href="Franchise worden.dc.html">Franchise worden</a>
+  <a href="Vestigingen.dc.html" class="btn btn-primary" style="justify-content:flex-start;color:var(--color-bg);text-decoration:none">Maak een afspraak</a>
 </nav>
 
 <div style="max-width:1200px;margin:0 auto;padding:0 clamp(20px,5vw,72px)">
@@ -78,7 +79,7 @@
     <div style="display:flex;gap:var(--space-3);flex-wrap:wrap;margin-top:28px">
       <button type="button" class="btn btn-primary" style="justify-content:flex-start">Plan een kennismaking</button>
       <a href="#bankzaken" class="btn btn-secondary" style="justify-content:flex-start;color:var(--color-text)">Bankzaken</a>
-      <button type="button" class="btn btn-ghost" style="justify-content:flex-start">Vind een kantoor bij jou</button>
+      <a href="Vestigingen.dc.html" class="btn btn-ghost" style="justify-content:flex-start;color:var(--color-text);text-decoration:none">Vind een kantoor bij jou</a>
     </div>
   </section>
 
@@ -86,16 +87,19 @@
 
   <section data-screen-label="Kernwaarden" data-m="cells" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:0;padding:0">
     <div style="padding:42px clamp(0px,2vw,28px) 42px 0;border-right:2px solid var(--color-divider)">
+      <span style="display:block;width:14px;height:14px;background:var(--asn-geel);margin:0 0 20px"></span>
       <p style="font-family:var(--font-heading);font-weight:800;font-size:clamp(28px,3vw,40px);line-height:1.1;color:var(--color-accent);margin:0 0 14px -0.045em">Eén adres</p>
       <p style="font-size:13px;line-height:20px;letter-spacing:0.08em;text-transform:uppercase;margin:0;color:var(--color-neutral-700)">Hypotheek, verzekering, krediet en bankzaken op één plek</p>
     </div>
     <div style="padding:42px clamp(0px,2vw,28px);border-right:2px solid var(--color-divider)">
+      <span style="display:block;width:14px;height:14px;background:var(--asn-oranje);margin:0 0 20px"></span>
       <p style="font-family:var(--font-heading);font-weight:800;font-size:clamp(28px,3vw,40px);line-height:1.1;color:var(--color-accent);margin:0 0 14px -0.045em">Eén adviseur</p>
       <p style="font-size:13px;line-height:20px;letter-spacing:0.08em;text-transform:uppercase;margin:0;color:var(--color-neutral-700)">Die je bij naam kent — en jij hem of haar</p>
     </div>
     <div style="padding:42px 0 42px clamp(0px,2vw,28px)">
-      <p style="font-family:var(--font-heading);font-weight:800;font-size:clamp(28px,3vw,40px);line-height:1.1;color:var(--color-accent);margin:0 0 14px -0.045em">100% zelfstandig</p>
-      <p style="font-size:13px;line-height:20px;letter-spacing:0.08em;text-transform:uppercase;margin:0;color:var(--color-neutral-700)">Lokaal geworteld, niet gebonden aan één bank of verzekeraar</p>
+      <span style="display:block;width:14px;height:14px;background:var(--asn-lichtgroen);margin:0 0 20px"></span>
+      <p style="font-family:var(--font-heading);font-weight:800;font-size:clamp(28px,3vw,40px);line-height:1.1;color:var(--asn-groen);margin:0 0 14px -0.045em">100% zelfstandig</p>
+      <p style="font-size:13px;line-height:20px;letter-spacing:0.08em;text-transform:uppercase;margin:0;color:var(--color-neutral-700)">Lokaal geworteld, niet gebonden aan één geldverstrekker of verzekeraar. Alleen voor de bankzaken hebben we een exclusieve samenwerking met ASN Bank.</p>
     </div>
   </section>
 
@@ -118,8 +122,8 @@
     <hr style="height:2px;border:0;margin:0;background:var(--color-divider)">
   </section>
 
-  <section id="bankzaken" data-screen-label="Bankzaken" data-m="sec" style="padding:70px 0 84px;border-bottom:2px solid var(--color-divider)">
-    <span style="display:block;font-size:13px;line-height:14px;letter-spacing:0.08em;text-transform:uppercase;color:var(--color-accent-700);margin:0 0 14px">Bankzaken</span>
+  <section id="bankzaken" data-screen-label="Bankzaken" data-m="sec" style="padding:70px clamp(20px,4vw,56px) 84px;margin:0 calc(-1 * clamp(20px,4vw,56px));background:var(--asn-geel);border-bottom:0">
+    <span style="display:block;font-size:13px;line-height:14px;letter-spacing:0.08em;text-transform:uppercase;color:var(--asn-groen);margin:0 0 14px">Bankzaken</span>
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:28px clamp(24px,4vw,72px);align-items:start">
       <div>
         <h2 style="font-size:32px;line-height:42px;letter-spacing:-0.015em;margin:0 0 20px">Bankzaken bij jou in de buurt. Een kantoor waar je gewoon binnenwandelt.</h2>
@@ -163,20 +167,27 @@
       <p style="font-size:15.5px;line-height:28px;color:var(--color-neutral-800);margin:20px 0 0;max-width:48ch">Fier Finance is een formule van zelfstandige kantoren. De ondernemer achter de deur woont in jouw regio, kent de woningmarkt om de hoek en staat er ook nog als de hypotheek al lang rond is.</p>
       <form style="display:flex;gap:var(--space-3);flex-wrap:wrap;align-items:flex-end;margin-top:28px" onSubmit="{{ preventSubmit }}">
         <div class="field" style="flex:1 1 180px;min-width:0">
-          <label for="postcode">Postcode</label>
-          <input id="postcode" class="input" type="text" placeholder="1234 AB" value="{{ postcode }}" onChange="{{ setPostcode }}">
+          <label for="postcode">Postcode of plaats</label>
+          <input id="postcode" class="input" type="text" placeholder="Postcode of plaats" value="{{ postcode }}" onChange="{{ setPostcode }}">
         </div>
         <button type="submit" class="btn btn-primary" style="justify-content:flex-start;min-height:36px">Vind mijn kantoor</button>
-        <a href="#bankzaken" class="btn btn-secondary" style="justify-content:flex-start;min-height:36px;color:var(--color-text)">Bankzaken</a>
       </form>
+      <sc-if value="{{ zoekBezig }}" hint-placeholder-val="{{ false }}">
+        <p style="font-size:14px;margin:20px 0 0;color:var(--color-neutral-700)">Zoeken…</p>
+      </sc-if>
       <sc-if value="{{ kantoorGevonden }}" hint-placeholder-val="{{ false }}">
-        <div style="margin-top:20px;border-top:2px solid var(--color-divider);padding-top:14px;display:grid;grid-template-columns:1fr auto;gap:14px;align-items:start">
-          <div>
-            <p style="font-family:var(--font-heading);font-weight:800;font-size:17px;margin:0">{{ kantoor.naam }}</p>
-            <p style="font-size:14px;line-height:22px;margin:4px 0 0;color:var(--color-neutral-800)">{{ kantoor.adres }}<br>{{ kantoor.adviseur }}</p>
-          </div>
-          <span class="tag tag-accent">{{ kantoor.afstand }}</span>
+        <div style="margin-top:20px;border-top:2px solid var(--color-divider)">
+          <sc-for list="{{ dichtbij }}" as="k" hint-placeholder-count="3">
+            <a href="{{ k.href }}" style="display:grid;grid-template-columns:minmax(0,1fr) auto;gap:14px;align-items:center;padding:14px 0;border-bottom:2px solid var(--color-divider);text-decoration:none;color:var(--color-text)">
+              <span>
+                <span style="display:block;font-family:var(--font-heading);font-weight:800;font-size:17px">Fier Finance {{ k.naam }}</span>
+                <span style="display:block;font-size:14px;line-height:22px;margin-top:2px;color:var(--color-neutral-800)">{{ k.straat }} · {{ k.postcode }} {{ k.plaats }}</span>
+              </span>
+              <span class="tag tag-accent">{{ k.afstand }}</span>
+            </a>
+          </sc-for>
         </div>
+        <a href="Vestigingen.dc.html" style="display:inline-block;margin-top:14px;font-size:14px;font-weight:600">Alle {{ aantal }} vestigingen bekijken</a>
       </sc-if>
     </div>
     <figure style="margin:0">
@@ -197,14 +208,17 @@
     <h2 style="font-size:clamp(28px,3.2vw,40px);line-height:1.1;letter-spacing:-0.015em;margin:0 0 42px;max-width:22ch">Fier is trots zonder opschepperij.</h2>
     <div data-m="cells" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:0;border-top:2px solid var(--color-divider);border-bottom:2px solid var(--color-divider)">
       <div style="padding:36px clamp(0px,2vw,28px) 36px 0;border-right:2px solid var(--color-divider)">
+        <span style="display:block;width:14px;height:14px;background:var(--asn-geel);margin:0 0 20px"></span>
         <h3 style="font-size:20px;line-height:28px;margin:0 0 14px">Fier op je huis</h3>
         <p style="font-size:15.5px;line-height:28px;margin:0;color:var(--color-neutral-800)">Rechtop staan en weten wat je waard bent. Een hypotheek die past bij je leven, niet bij een verkooptarget.</p>
       </div>
       <div style="padding:36px clamp(0px,2vw,28px);border-right:2px solid var(--color-divider)">
+        <span style="display:block;width:14px;height:14px;background:var(--asn-oranje);margin:0 0 20px"></span>
         <h3 style="font-size:20px;line-height:28px;margin:0 0 14px">Fier op je bedrijf</h3>
         <p style="font-size:15.5px;line-height:28px;margin:0;color:var(--color-neutral-800)">Zakelijk krediet, bedrijfsverzekeringen en bankzaken — geregeld door iemand die begrijpt wat ondernemen in jouw regio betekent.</p>
       </div>
       <div style="padding:36px 0 36px clamp(0px,2vw,28px)">
+        <span style="display:block;width:14px;height:14px;background:var(--asn-lichtgroen);margin:0 0 20px"></span>
         <h3 style="font-size:20px;line-height:28px;margin:0 0 14px">Fier op wat je geregeld hebt</h3>
         <p style="font-size:15.5px;line-height:28px;margin:0;color:var(--color-neutral-800)">Met vertrouwen naar de toekomst kijken, omdat je weet dat het klopt. Dat gevoel na het gesprek — daar doen we het voor.</p>
       </div>
@@ -265,12 +279,23 @@
       <p style="font-family:var(--font-heading);font-weight:800;font-size:15px;color:var(--color-text);margin:0 0 8px">Toezicht</p>
       <p style="margin:0">AFM-vergunning en Kifid-aansluiting per kantoor · Dienstverleningsdocument · Privacy</p>
     </div>
+    <div>
+      <p style="font-family:var(--font-heading);font-weight:800;font-size:15px;color:var(--color-text);margin:0 0 8px">Organisatie</p>
+      <p style="margin:0;display:flex;flex-direction:column;gap:2px"><a href="Vestigingen.dc.html" style="color:inherit">Alle vestigingen</a><a href="Franchise worden.dc.html" style="color:inherit">Franchisenemer worden</a></p>
+    </div>
   </footer>
 </div>
 </x-dc>
 <script type="text/x-dc" data-dc-script data-props="{&quot;tagline&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;default&quot;:&quot;Fier vooruit.&quot;,&quot;options&quot;:[&quot;Fier vooruit.&quot;,&quot;Trots op wat je opbouwt.&quot;,&quot;Fier geregeld.&quot;],&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Hero&quot;},&quot;toonWonen&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Diensten&quot;}}">
 class Component extends DCLogic {
-  state = { postcode: '', gezocht: false, doelgroep: 'particulier' };
+  state = { postcode: '', gezocht: false, bezig: false, dichtbij: [], doelgroep: 'particulier' };
+  componentDidMount() { this._r = () => this.forceUpdate(); window.addEventListener('fier-vestigingen', this._r); }
+  componentWillUnmount() { window.removeEventListener('fier-vestigingen', this._r); }
+  zoek(q) {
+    const F = window.FierVestigingen; if (!F || !q) return;
+    this.setState({ bezig: true, gezocht: false });
+    F.zoek(q).then(r => this.setState({ bezig: false, gezocht: true, dichtbij: (r ? r.results : []).slice(0, 3).map(v => ({ ...v, afstand: F.kmLabel(v.km), href: 'Vestiging.dc.html?id=' + v.id })) }));
+  }
   renderVals() {
     const tag = this.props.tagline ?? 'Fier vooruit.';
     const taglines = {
@@ -324,10 +349,12 @@ class Component extends DCLogic {
       heroSub: this.props.heroTekst ?? 'Fier Finance is het lokale financiële kantoor voor particulieren en ondernemers. Voor hypotheken, verzekeringen, kredieten en bankzaken — en waar aangeboden ook makelaardij. Eén vertrouwd adres, persoonlijk advies, en een adviseur die je bij naam kent. Zodat je fier vooruit kunt.',
       diensten,
       postcode: this.state.postcode,
-      setPostcode: (e) => this.setState({ postcode: e.target.value, gezocht: false }),
-      preventSubmit: (e) => { e.preventDefault(); const v = (e.target.querySelector('input')?.value ?? this.state.postcode).trim(); this.setState({ postcode: v, gezocht: v.length >= 4 }); },
-      kantoorGevonden: this.state.gezocht,
-      kantoor: { naam: 'Fier Finance Amersfoort', adres: 'Langestraat 12 · 3811 AB Amersfoort', adviseur: 'Adviseur: Mark de Vries', afstand: '2,4 km' },
+      setPostcode: (e) => this.setState({ postcode: e.target.value }),
+      preventSubmit: (e) => { e.preventDefault(); const v = (e.target.querySelector('input')?.value ?? this.state.postcode).trim(); this.setState({ postcode: v }); this.zoek(v); },
+      kantoorGevonden: this.state.gezocht && this.state.dichtbij.length > 0,
+      zoekBezig: this.state.bezig,
+      dichtbij: this.state.dichtbij,
+      aantal: window.FierVestigingen ? window.FierVestigingen.lijst.length : 107,
       isParticulier: doelgroep === 'particulier',
       isOndernemer: doelgroep === 'ondernemer',
       kiesParticulier: () => this.setState({ doelgroep: 'particulier' }),

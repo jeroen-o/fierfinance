@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="_ds/modernist-147b6d48-53bd-4a7b-b37e-74b8a6235979/styles.css">
+  <script src="_ds/modernist-147b6d48-53bd-4a7b-b37e-74b8a6235979/_ds_bundle.js"></script>
+  <script src="./vestigingen.js"></script>
+  <style>
+    :root { --color-accent: #f0533d; --color-accent-500: #f0533d; --color-accent-600: #d8412c; --color-accent-700: #a82b18; --color-text: #373737; --color-neutral-700: #575756; --color-neutral-800: #575756; --color-divider: color-mix(in srgb, #373737 35%, transparent); --asn-geel: #fada87; --asn-oranje: #fba36f; --asn-lichtgroen: #1f7d65; --asn-groen: #1f7d65; --asn-bordeaux: #7c1230; --asn-creme: #fdf3e5; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; text-wrap: pretty; background: var(--color-bg); color: var(--color-text); font-family: var(--font-body); }
+    a { color: var(--asn-bordeaux); text-underline-offset: 3px; }
+    a:hover { color: var(--color-accent); }
+    .nav a:hover { color: var(--color-accent); }
+    .btn, .tag, .nav-brand, .nav a { white-space: nowrap; text-wrap: nowrap; text-align: left; }
+    @media (max-width: 880px) {
+      [data-m="nav"] { flex-wrap: wrap; row-gap: 10px; padding-block: 14px !important; }
+      [data-m="nav"] a:not(.nav-brand) { font-size: 13px; }
+      [data-m="nav"] .btn { margin-left: auto; }
+      [data-m="hero"] { padding: 56px 0 48px !important; }
+      [data-m="sec"] { padding: 56px 0 48px !important; }
+      [data-m="dienst"] { grid-template-columns: minmax(0,1fr) !important; gap: 12px !important; padding: 28px 0 !important; }
+      [data-m="cells"] { grid-template-columns: minmax(0,1fr) !important; }
+      [data-m="cells"] > div { border-right: 0 !important; padding: 24px 0 !important; border-top: 2px solid var(--color-divider); }
+      [data-m="cells"] > div:first-child { border-top: 0; }
+    }
+    @media (max-width: 560px) {
+      [data-m="nav"] a:not(.nav-brand) { display: none; }
+      [data-m="nav"] .nav-brand { flex: 1; }
+      .btn { width: 100%; }
+      [data-m="nav"] .btn { width: auto; }
+    }
+  </style>
+</helmet>
+
+<nav class="nav" data-m="nav" style="padding-inline: max(clamp(20px,5vw,72px), calc((100% - 1200px) / 2 + clamp(20px,5vw,72px)))">
+  <a href="Fier Finance.dc.html" class="nav-brand" style="display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--color-text);font-size:18px"><span style="display:flex;width:32px;height:32px;flex:none;background:var(--color-accent);color:var(--color-bg);font-family:var(--font-heading);font-weight:800;font-size:27px;line-height:0.8;padding:3px 4px;box-sizing:border-box">F</span>Fier Finance</a>
+  <a href="Fier Finance.dc.html#diensten">Diensten</a>
+  <a href="Fier Finance.dc.html#bankzaken">Bankzaken</a>
+  <a href="Vestigingen.dc.html">Vestigingen</a>
+  <a href="Fier Finance.dc.html#waarom">Waarom Fier</a>
+  <a href="Franchise worden.dc.html" style="color:var(--color-accent-700)">Franchise worden</a>
+  <a href="#aanmelden" class="btn btn-primary" style="justify-content:flex-start;color:var(--color-bg);text-decoration:none">Oriënterend gesprek</a>
+</nav>
+
+<div style="max-width:1200px;margin:0 auto;padding:0 clamp(20px,5vw,72px)">
+
+  <section data-screen-label="Franchise hero" data-m="hero" style="padding:112px 0 84px">
+    <span style="display:block;font-size:13px;line-height:14px;letter-spacing:0.08em;text-transform:uppercase;color:var(--color-accent-700);margin:0 0 20px">Franchisenemer worden</span>
+    <h1 style="font-family:var(--font-heading);font-weight:800;font-size:clamp(42px,6.2vw,84px);line-height:1.06;letter-spacing:-0.02em;margin:0 0 0 -0.058em"><span style="display:block">Fier op je</span><span style="display:block;color:var(--color-accent)">eigen kantoor.</span></h1>
+    <p style="font-size:17px;line-height:28px;max-width:58ch;margin:36px 0 0">Zelfstandig ondernemen, met de rug recht — en met een formule achter je die het zware werk deelt. Fier Finance geeft je een sterk merk, een eigen volmacht, bankzaken via ASN Bank en toegang tot alle grote geldverstrekkers. Jij houdt je eigen klanten, je eigen regio en je eigen naam in de buurt.</p>
+    <div style="display:flex;gap:var(--space-3);flex-wrap:wrap;margin-top:28px">
+      <a href="#aanmelden" class="btn btn-primary" style="color:var(--color-bg);text-decoration:none">Plan een oriënterend gesprek</a>
+      <a href="Vestigingen.dc.html" class="btn btn-ghost" style="color:var(--color-text);text-decoration:none">Bekijk alle vestigingen</a>
+    </div>
+  </section>
+
+  <hr style="height:2px;border:0;margin:0;background:var(--color-divider)">
+
+  <section data-screen-label="Formule in cijfers" data-m="cells" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:0">
+    <div style="padding:42px clamp(0px,2vw,28px) 42px 0;border-right:2px solid var(--color-divider)">
+      <p style="font-family:var(--font-heading);font-weight:800;font-size:clamp(40px,4.4vw,60px);line-height:1;color:var(--color-accent);margin:0 0 14px;font-feature-settings:'tnum' 1">{{ aantalVestigingen }}</p>
+      <p style="font-size:13px;line-height:20px;letter-spacing:0.08em;text-transform:uppercase;margin:0;color:var(--color-neutral-700)">Vestigingen door heel Nederland</p>
+    </div>
+    <div style="padding:42px clamp(0px,2vw,28px);border-right:2px solid var(--color-divider)">
+      <p style="font-family:var(--font-heading);font-weight:800;font-size:clamp(40px,4.4vw,60px);line-height:1;color:var(--color-accent);margin:0 0 14px;font-feature-settings:'tnum' 1">{{ aantalOndernemers }}</p>
+      <p style="font-size:13px;line-height:20px;letter-spacing:0.08em;text-transform:uppercase;margin:0;color:var(--color-neutral-700)">Zelfstandige ondernemers</p>
+    </div>
+    <div style="padding:42px 0 42px clamp(0px,2vw,28px)">
+      <p style="font-family:var(--font-heading);font-weight:800;font-size:clamp(40px,4.4vw,60px);line-height:1;color:var(--color-accent);margin:0 0 14px;font-feature-settings:'tnum' 1">7</p>
+      <p style="font-size:13px;line-height:20px;letter-spacing:0.08em;text-transform:uppercase;margin:0;color:var(--color-neutral-700)">Fier-merken onder één dak</p>
+    </div>
+  </section>
+
+  <hr style="height:2px;border:0;margin:0;background:var(--color-divider)">
+
+  <section data-screen-label="Wat je krijgt" data-m="sec" style="padding:84px 0 70px">
+    <span style="display:block;font-size:13px;line-height:14px;letter-spacing:0.08em;text-transform:uppercase;color:var(--color-accent-700);margin:0 0 14px">Wat de formule je geeft</span>
+    <h2 style="font-size:clamp(28px,3.2vw,40px);line-height:1.1;letter-spacing:-0.015em;margin:0 0 42px;max-width:24ch">Jij doet het advies. Wij regelen de rest van de achterkant.</h2>
+    <sc-for list="{{ voordelen }}" as="d" hint-placeholder-count="6">
+      <div data-m="dienst" style="display:grid;grid-template-columns:minmax(64px,160px) minmax(0,420px) minmax(0,1fr);gap:28px clamp(24px,4vw,72px);align-items:baseline;padding:36px 0;border-top:2px solid var(--color-divider)">
+        <p style="font-family:var(--font-heading);font-weight:800;font-size:18px;line-height:28px;margin:0;font-feature-settings:'tnum' 1;display:flex;align-items:center;gap:14px"><span style="display:flex;width:28px;height:28px;flex:none;background:var(--color-accent);color:var(--color-bg);font-family:var(--font-heading);font-weight:800;font-size:24px;line-height:0.8;padding:3px 3px;box-sizing:border-box">F</span>{{ d.num }}</p>
+        <h3 style="font-size:24px;line-height:28px;letter-spacing:-0.01em;margin:0">{{ d.titel }}</h3>
+        <p style="font-size:15.5px;line-height:28px;margin:0;max-width:52ch;color:var(--color-neutral-800)">{{ d.copy }}</p>
+      </div>
+    </sc-for>
+    <hr style="height:2px;border:0;margin:0;background:var(--color-divider)">
+  </section>
+
+  <section data-screen-label="Wie we zoeken" data-m="sec" style="padding:14px 0 84px">
+    <span style="display:block;font-size:13px;line-height:14px;letter-spacing:0.08em;text-transform:uppercase;color:var(--color-accent-700);margin:0 0 14px">Wie we zoeken</span>
+    <h2 style="font-size:clamp(28px,3.2vw,40px);line-height:1.1;letter-spacing:-0.015em;margin:0 0 42px;max-width:22ch">Fier op het vak. Geworteld in je regio.</h2>
+    <div data-m="cells" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:0;border-top:2px solid var(--color-divider);border-bottom:2px solid var(--color-divider)">
+      <div style="padding:36px clamp(0px,2vw,28px) 36px 0;border-right:2px solid var(--color-divider)">
+        <h3 style="font-size:20px;line-height:28px;margin:0 0 14px">Ondernemer</h3>
+        <p style="font-size:15.5px;line-height:28px;margin:0;color:var(--color-neutral-800)">Je hebt al een kantoor, of je wilt er een beginnen. Je denkt in klantrelaties van jaren, niet in transacties.</p>
+      </div>
+      <div style="padding:36px clamp(0px,2vw,28px);border-right:2px solid var(--color-divider)">
+        <h3 style="font-size:20px;line-height:28px;margin:0 0 14px">Vakbekwaam</h3>
+        <p style="font-size:15.5px;line-height:28px;margin:0;color:var(--color-neutral-800)">Wft-gediplomeerd, of bereid dat te worden. Wij helpen met permanente educatie, compliance en kwaliteitstoetsing.</p>
+      </div>
+      <div style="padding:36px 0 36px clamp(0px,2vw,28px)">
+        <h3 style="font-size:20px;line-height:28px;margin:0 0 14px">Lokaal</h3>
+        <p style="font-size:15.5px;line-height:28px;margin:0;color:var(--color-neutral-800)">Je kent je regio: de woningmarkt, de ondernemers, de clubs. Daar zit je voorsprong — en die houd je.</p>
+      </div>
+    </div>
+  </section>
+
+  <section data-screen-label="Stappen" data-m="sec" style="padding:0 0 84px">
+    <span style="display:block;font-size:13px;line-height:14px;letter-spacing:0.08em;text-transform:uppercase;color:var(--color-accent-700);margin:0 0 14px">Zo werkt het</span>
+    <h2 style="font-size:clamp(28px,3.2vw,40px);line-height:1.1;letter-spacing:-0.015em;margin:0 0 42px">In vier stappen naar je Fier-kantoor.</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:28px">
+      <sc-for list="{{ stappen }}" as="s" hint-placeholder-count="4">
+        <div style="border-top:6px solid {{ s.kleur }};padding-top:20px">
+          <p style="font-family:var(--font-heading);font-weight:800;font-size:40px;line-height:1;color:var(--color-accent);margin:0 0 20px;font-feature-settings:'tnum' 1">{{ s.num }}</p>
+          <h3 style="font-size:20px;line-height:28px;margin:0 0 8px">{{ s.titel }}</h3>
+          <p style="font-size:15px;line-height:26px;margin:0;color:var(--color-neutral-800)">{{ s.copy }}</p>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <hr style="height:2px;border:0;margin:0;background:var(--color-divider)">
+
+  <section id="aanmelden" data-screen-label="Aanmelden" data-m="sec" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:36px clamp(24px,5vw,96px);align-items:start;padding:84px 0">
+    <div>
+      <span style="display:block;font-size:13px;line-height:14px;letter-spacing:0.08em;text-transform:uppercase;color:var(--color-accent-700);margin:0 0 14px">Oriënterend gesprek</span>
+      <h2 style="font-size:32px;line-height:42px;letter-spacing:-0.015em;margin:0">Eerst kennismaken. Vrijblijvend en vertrouwelijk.</h2>
+      <p style="font-size:15.5px;line-height:28px;color:var(--color-neutral-800);margin:20px 0 0;max-width:46ch">Laat je gegevens achter; we nemen binnen twee werkdagen contact op om een gesprek in te plannen — bij jou op kantoor of bij ons.</p>
+    </div>
+    <div>
+      <sc-if value="{{ nietVerstuurd }}" hint-placeholder-val="{{ true }}">
+        <form style="display:grid;gap:20px" onSubmit="{{ onSubmit }}">
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px">
+            <div class="field"><label for="f-naam">Naam</label><input id="f-naam" class="input" type="text" required></div>
+            <div class="field"><label for="f-plaats">Plaats of regio</label><input id="f-plaats" class="input" type="text" required></div>
+            <div class="field"><label for="f-mail">E-mail</label><input id="f-mail" class="input" type="email" required></div>
+            <div class="field"><label for="f-tel">Telefoon</label><input id="f-tel" class="input" type="tel"></div>
+          </div>
+          <div class="field">
+            <label>Huidige situatie</label>
+            <div class="seg" role="radiogroup" style="flex-wrap:wrap">
+              <label class="seg-opt"><input type="radio" name="situatie" value="eigen" checked="{{ sEigen }}" onChange="{{ kiesEigen }}">Eigen kantoor</label>
+              <label class="seg-opt"><input type="radio" name="situatie" value="loondienst" checked="{{ sLoon }}" onChange="{{ kiesLoon }}">Adviseur in loondienst</label>
+              <label class="seg-opt"><input type="radio" name="situatie" value="anders" checked="{{ sAnders }}" onChange="{{ kiesAnders }}">Anders</label>
+            </div>
+          </div>
+          <div class="field"><label for="f-bericht">Waar wil je het over hebben?</label><textarea id="f-bericht" class="input" rows="4" style="resize:vertical;min-height:96px"></textarea></div>
+          <div><button type="submit" class="btn btn-primary">Verstuur aanvraag</button></div>
+        </form>
+      </sc-if>
+      <sc-if value="{{ verstuurd }}" hint-placeholder-val="{{ false }}">
+        <div style="border-top:2px solid var(--color-accent);padding-top:20px">
+          <p style="font-family:var(--font-heading);font-weight:800;font-size:24px;line-height:32px;margin:0 0 8px">Dank je. We bellen je snel.</p>
+          <p style="font-size:15.5px;line-height:28px;margin:0;color:var(--color-neutral-800)">Binnen twee werkdagen nemen we contact op om een oriënterend gesprek in te plannen.</p>
+        </div>
+      </sc-if>
+    </div>
+  </section>
+</div>
+
+<section data-screen-label="Close" style="background:var(--color-accent);color:var(--color-bg)">
+  <div style="max-width:1200px;margin:0 auto;padding:84px clamp(20px,5vw,72px)">
+    <h3 style="font-size:clamp(34px,4.2vw,56px);line-height:1.06;letter-spacing:-0.015em;margin:0 0 0 -0.058em;color:var(--color-bg)"><span style="display:block">Zelfstandig advies.</span><span style="display:block">Fier geregeld.</span></h3>
+  </div>
+</section>
+
+<div style="max-width:1200px;margin:0 auto;padding:0 clamp(20px,5vw,72px)">
+  <footer style="padding:42px 0 56px;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:28px;font-size:13px;line-height:22px;color:var(--color-neutral-700)">
+    <div>
+      <div style="display:flex;align-items:center;gap:10px;margin:0 0 10px"><span style="display:flex;width:36px;height:36px;flex:none;background:var(--color-accent);color:var(--color-bg);font-family:var(--font-heading);font-weight:800;font-size:31px;line-height:0.8;padding:4px 4px;box-sizing:border-box">F</span><span style="font-family:var(--font-heading);font-weight:800;font-size:15px;color:var(--color-text)">Fier Finance</span></div>
+      <p style="margin:0">Zelfstandig advies. Fier geregeld.</p>
+    </div>
+    <div>
+      <p style="font-family:var(--font-heading);font-weight:800;font-size:15px;color:var(--color-text);margin:0 0 8px">Merkfamilie</p>
+      <p style="margin:0">Fier Hypotheken · Fier Verzekeren · Fier Kredieten · Fier Wonen · Fier Volmacht</p>
+    </div>
+    <div>
+      <p style="font-family:var(--font-heading);font-weight:800;font-size:15px;color:var(--color-text);margin:0 0 8px">Organisatie</p>
+      <p style="margin:0;display:flex;flex-direction:column;gap:2px"><a href="Vestigingen.dc.html" style="color:inherit">Alle vestigingen</a><a href="Franchise worden.dc.html" style="color:inherit">Franchisenemer worden</a></p>
+    </div>
+  </footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { verstuurd: false, situatie: 'eigen' };
+  componentDidMount() { this._r = () => this.forceUpdate(); window.addEventListener('fier-vestigingen', this._r); }
+  componentWillUnmount() { window.removeEventListener('fier-vestigingen', this._r); }
+  renderVals() {
+    const F = window.FierVestigingen;
+    const nr = (a, i) => a.map((x, j) => ({ ...x, num: String(j + 1).padStart(2, '0') }));
+    const s = this.state.situatie;
+    return {
+      aantalVestigingen: F ? F.lijst.length : 107,
+      aantalOndernemers: F ? F.franchisenemers : 39,
+      voordelen: nr([
+        { titel: 'Een merk dat staat', copy: 'Fier Finance als herkenbaar lokaal adres, met website, vestigingspagina, huisstijl en campagnes die landelijk gemaakt en lokaal ingezet worden.' },
+        { titel: 'Zelfstandig Adviseur van ASN Bank', copy: 'Bankzaken als vaste pijler: het complete productaanbod van ASN Bank voor particulier en zakelijk, en klanten die daardoor vaker binnenlopen.' },
+        { titel: 'Eigen volmacht en schadeafhandeling', copy: 'Fier Volmacht maakt polissen op en handelt schades af. Kortere lijnen en een service waarmee je je als kantoor onderscheidt.' },
+        { titel: 'Alle grote geldverstrekkers', copy: 'Toegang tot meer dan twintig hypotheekverstrekkers en verzekeraars, zodat je onafhankelijk kunt blijven adviseren.' },
+        { titel: 'Systemen, compliance en opleiding', copy: 'Advies- en CRM-software, AFM- en Kifid-ondersteuning, permanente educatie en kwaliteitstoetsing — centraal geregeld.' },
+        { titel: 'Een netwerk van collega’s', copy: 'Tientallen zelfstandige ondernemers die kennis delen, elkaar vervangen bij drukte en samen inkoopvoordeel halen.' },
+      ]),
+      stappen: nr([
+        { kleur: 'var(--asn-geel)', titel: 'Kennismaking', copy: 'Een vertrouwelijk gesprek over jou, je kantoor en je ambitie.' },
+        { kleur: 'var(--asn-oranje)', titel: 'Regio & plan', copy: 'Samen kijken we naar je werkgebied en maken we een businessplan.' },
+        { kleur: 'var(--asn-lichtgroen)', titel: 'Overeenkomst', copy: 'Heldere afspraken over formule, fee en ondersteuning.' },
+        { kleur: 'var(--asn-groen)', titel: 'Opening', copy: 'Inrichting, systemen en lokale lancering onder de Fier-vlag.' },
+      ]),
+      sEigen: s === 'eigen', sLoon: s === 'loondienst', sAnders: s === 'anders',
+      kiesEigen: () => this.setState({ situatie: 'eigen' }),
+      kiesLoon: () => this.setState({ situatie: 'loondienst' }),
+      kiesAnders: () => this.setState({ situatie: 'anders' }),
+      onSubmit: e => { e.preventDefault(); this.setState({ verstuurd: true }); },
+      verstuurd: this.state.verstuurd,
+      nietVerstuurd: !this.state.verstuurd,
+    };
+  }
+}
+</script>
+</body>
+</html>
