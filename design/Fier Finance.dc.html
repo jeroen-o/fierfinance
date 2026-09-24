@@ -36,6 +36,10 @@
       [data-m="kantoren"] { padding: 40px 0 56px !important; }
       [data-m="kantoren"] figure { order: -1; }
       [data-m="sec"] { padding: 56px 0 48px !important; }
+      [data-m="bank"] { padding: 56px clamp(20px,5vw,72px) !important; }
+      [data-m="bank-grid"] { grid-template-columns: minmax(0,1fr) !important; row-gap: 40px !important; }
+      [data-m="bank-rows"] { border-top: 2px solid var(--color-divider); }
+      [data-m="bank-rows"] > [data-m="row"]:first-child { padding-top: 28px !important; }
       [data-m="quote"] { padding: 0 0 56px !important; }
       [data-m="close"] { padding: 56px clamp(20px,5vw,72px) !important; }
       .btn { width: 100%; }
@@ -46,7 +50,8 @@
       [data-m="nav"] .nav-brand { flex: 1; }
       [data-m="nav"] .btn { margin-left: 0; }
       [data-m="row"] { grid-template-columns: minmax(0,1fr) !important; }
-      [data-m="row"] .btn { width: 100%; }
+      [data-m="row"] .btn { width: 100%; justify-content: center !important; }
+      [data-m="bank-logo"] img { height: 24px !important; }
       .table td, .table th { padding-inline: 8px; font-size: 14px; }
     }
   </style>
@@ -122,39 +127,39 @@
     <hr style="height:2px;border:0;margin:0;background:var(--color-divider)">
   </section>
 
-  <section id="bankzaken" data-screen-label="Bankzaken" data-m="sec" style="padding:70px clamp(20px,4vw,56px) 84px;margin:0 calc(-1 * clamp(20px,4vw,56px));background:var(--asn-geel);border-bottom:0">
+  <section id="bankzaken" data-screen-label="Bankzaken" data-m="bank" style="padding:84px clamp(20px,5vw,72px);margin:0 calc(-1 * clamp(20px,5vw,72px));background:var(--asn-geel);border-bottom:0">
     <span style="display:block;font-size:13px;line-height:14px;letter-spacing:0.08em;text-transform:uppercase;color:var(--asn-groen);margin:0 0 14px">Bankzaken</span>
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:28px clamp(24px,4vw,72px);align-items:start">
-      <div>
+    <div data-m="bank-grid" style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:0 clamp(32px,5vw,96px);align-items:stretch">
+      <div style="display:flex;flex-direction:column">
         <h2 style="font-size:32px;line-height:42px;letter-spacing:-0.015em;margin:0 0 20px">Bankzaken bij jou in de buurt. Een kantoor waar je gewoon binnenwandelt.</h2>
         <p style="font-size:15.5px;line-height:28px;color:var(--color-neutral-800);margin:0 0 20px;max-width:52ch">Fier Finance is Zelfstandig Adviseur van ASN Bank. Dat betekent dat je bij ons terecht kunt voor het complete productenaanbod van ASN Bank: betalen, sparen, beleggen en hypotheek — met een adviseur tegenover je in plaats van een wachtrij.</p>
-        <p style="font-size:15.5px;line-height:28px;color:var(--color-neutral-800);margin:0;max-width:52ch">We kozen voor ASN Bank omdat de bank zich onderscheidt door haar focus op duurzaamheid, mens en maatschappij. Moderne bankproducten met de ambitie om een positieve impact te maken — dat past bij hoe wij midden in de lokale gemeenschap werken.</p>
-        <div style="display:flex;align-items:center;gap:14px;margin-top:28px;padding-top:20px;border-top:2px solid var(--color-divider)">
+        <p style="font-size:15.5px;line-height:28px;color:var(--color-neutral-800);margin:0 0 28px;max-width:52ch">We kozen voor ASN Bank omdat de bank zich onderscheidt door haar focus op duurzaamheid, mens en maatschappij. Moderne bankproducten met de ambitie om een positieve impact te maken — dat past bij hoe wij midden in de lokale gemeenschap werken.</p>
+        <div data-m="bank-logo" style="display:flex;align-items:center;flex-wrap:wrap;gap:14px;margin-top:auto;padding-top:28px;border-top:2px solid var(--color-divider)">
           <img src="uploads/logo-asn.svg" alt="ASN Bank" style="height:28px;width:auto">
           <span style="font-size:13px;line-height:20px;letter-spacing:0.08em;text-transform:uppercase;color:var(--color-neutral-700)">Zelfstandig Adviseur van ASN Bank</span>
         </div>
       </div>
-      <div style="display:grid;gap:0;border-top:2px solid var(--color-divider)">
-        <div data-m="row" style="display:grid;grid-template-columns:minmax(0,1fr) auto;gap:14px;align-items:start;padding:28px 0;border-bottom:2px solid var(--color-divider)">
+      <div data-m="bank-rows" style="display:flex;flex-direction:column">
+        <div data-m="row" style="display:grid;grid-template-columns:minmax(0,1fr) auto;gap:14px 28px;align-items:start;padding:7px 0 28px;border-bottom:2px solid var(--color-divider)">
           <div>
             <h3 style="font-size:20px;line-height:28px;margin:0 0 8px">Particulier</h3>
             <p style="font-size:15.5px;line-height:28px;margin:0;color:var(--color-neutral-800)">Betaalrekening, sparen en beleggen. Openen doe je bij ons aan tafel, beheren doe je zelf in de app.</p>
           </div>
           <button type="button" class="btn btn-primary" style="justify-content:flex-start">Meer informatie</button>
         </div>
-        <div data-m="row" style="display:grid;grid-template-columns:minmax(0,1fr) auto;gap:14px;align-items:start;padding:28px 0;border-bottom:2px solid var(--color-divider)">
+        <div data-m="row" style="display:grid;grid-template-columns:minmax(0,1fr) auto;gap:14px 28px;align-items:start;padding:28px 0;border-bottom:2px solid var(--color-divider)">
           <div>
             <h3 style="font-size:20px;line-height:28px;margin:0 0 8px">Bedrijf</h3>
             <p style="font-size:15.5px;line-height:28px;margin:0;color:var(--color-neutral-800)">Zakelijk betalen en sparen voor zzp’ers en mkb, gekoppeld aan je verzekeringen en krediet bij hetzelfde adres.</p>
           </div>
           <button type="button" class="btn btn-primary" style="justify-content:flex-start">Meer informatie</button>
         </div>
-        <div data-m="row" style="display:grid;grid-template-columns:minmax(0,1fr) auto;gap:14px;align-items:start;padding:28px 0">
+        <div data-m="row" style="display:grid;grid-template-columns:minmax(0,1fr) auto;gap:14px 28px;align-items:start;padding:28px 0 0">
           <div>
             <h3 style="font-size:20px;line-height:28px;margin:0 0 8px">Initiatieven</h3>
             <p style="font-size:15.5px;line-height:28px;margin:0;color:var(--color-neutral-800)">Lokale projecten die we samen met ASN Bank steunen — omdat bankieren ook iets terug mag geven aan de buurt.</p>
           </div>
-          <button type="button" class="btn btn-secondary" style="justify-content:flex-start">Meer informatie</button>
+          <button type="button" class="btn btn-primary" style="justify-content:flex-start">Meer informatie</button>
         </div>
       </div>
     </div>
